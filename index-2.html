@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bella Vie Salon & Spa — Luxury Beauty in Dubai</title>
+  <meta name="description" content="Bella Vie Salon & Spa — Dubai's premier ladies-only luxury beauty salon and spa. Indulge in world-class hair, skincare, facials, massage, and nail treatments." />
+  <meta name="keywords" content="luxury salon Dubai, beauty spa Dubai, ladies salon Dubai, facial Dubai, hair salon Dubai, nail salon Dubai" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bella Vie Salon & Spa — Luxury Beauty in Dubai" />
+  <meta property="og:description" content="World-class beauty, skincare, and spa treatments designed for the modern Dubai woman." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon: inline SVG data URI -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23C9956A'/><text y='68' x='50' text-anchor='middle' font-size='52' font-family='serif' fill='white'>B</text></svg>" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav__logo" aria-label="Bella Vie Salon & Spa — Home">
+        <!-- Logo embedded as SVG data URI based on uploaded logo style -->
+        <div class="nav__logo-mark">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Ccircle cx='80' cy='80' r='78' fill='%231A1218' stroke='%23C9956A' stroke-width='1.5'/%3E%3Ctext x='80' y='72' text-anchor='middle' font-family='Georgia,serif' font-size='42' font-weight='700' letter-spacing='4' fill='white'%3EBELLA%3C/text%3E%3Ctext x='80' y='110' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='300' letter-spacing='3' fill='%23C9956A'%3EVIE%3C/text%3E%3C/svg%3E"
+            alt="Bella Vie"
+            class="nav__logo-img"
+          />
+          <span class="nav__logo-text">Salon &amp; Spa</span>
+        </div>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link nav__link--active" aria-current="page">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+        <li><a href="packages.html" class="nav__link">Packages</a></li>
+        <li><a href="testimonials.html" class="nav__link">Testimonials</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <a href="contact.html" class="btn btn--nav">Book Now</a>
+
+      <!-- Hamburger -->
+      <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="nav__drawer" id="navDrawer" aria-hidden="true">
+      <ul class="nav__drawer-links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+        <li><a href="packages.html" class="nav__link">Packages</a></li>
+        <li><a href="testimonials.html" class="nav__link">Testimonials</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+        <li><a href="contact.html" class="btn btn--primary btn--full">Book Appointment</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO — Editorial split-screen
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <!-- Left: cinematic image panel -->
+    <div class="hero__image-panel">
+      <img
+        src="https://images.unsplash.com/photo-1544717304-a2db4a7b16ee?auto=format&fit=crop&w=1400&q=80"
+        alt="Woman in luxury spa wearing white towel, serene expression"
+        class="hero__img"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="hero__image-overlay"></div>
+      <!-- Floating accent pill -->
+      <div class="hero__badge" aria-hidden="true">
+        <span class="hero__badge-dot"></span>
+        <span>Ladies Only</span>
+      </div>
+    </div>
+
+    <!-- Right: brand statement -->
+    <div class="hero__content">
+      <div class="hero__eyebrow" data-reveal>Dubai, UAE</div>
+      <h1 class="hero__headline" data-reveal>
+        Luxury Beauty<br />
+        <em>&amp; Spa</em><br />
+        <span class="hero__headline-sub">Experience</span>
+      </h1>
+      <p class="hero__body" data-reveal>
+        Indulge in world-class beauty, skincare, hair, and spa treatments designed to make every woman feel beautiful, confident, and radiant.
+      </p>
+      <div class="hero__actions" data-reveal>
+        <a href="contact.html" class="btn btn--primary">Book Appointment</a>
+        <a href="services.html" class="btn btn--ghost">Explore Services</a>
+      </div>
+
+      <!-- Floating stats -->
+      <div class="hero__stats" aria-label="Key figures">
+        <div class="hero__stat">
+          <span class="hero__stat-num">12+</span>
+          <span class="hero__stat-label">Years of Excellence</span>
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">20k+</span>
+          <span class="hero__stat-label">Happy Clients</span>
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">40+</span>
+          <span class="hero__stat-label">Treatments</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative floating orbs -->
+    <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       WHY CHOOSE BELLA VIE
+  ═══════════════════════════════════════════ -->
+  <section class="why section" id="why" aria-labelledby="why-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Why Choose Us</p>
+        <h2 class="section-title" id="why-title">The Bella Vie Difference</h2>
+        <p class="section-subtitle">Every detail has been considered to give you an experience that transcends the ordinary.</p>
+      </div>
+
+      <div class="why__grid">
+        <article class="why__card" data-reveal>
+          <div class="why__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2C7.37 2 2 7.37 2 14s5.37 12 12 12 12-5.37 12-12S20.63 2 14 2zm0 22c-5.52 0-10-4.48-10-10S8.48 4 14 4s10 4.48 10 10-4.48 10-10 10zm-1-15h2v6h-2zm0 8h2v2h-2z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="why__card-title">Expert Therapists</h3>
+          <p class="why__card-body">Our certified beauty professionals are trained to the highest international standards, bringing years of specialist experience to every treatment.</p>
+        </article>
+
+        <article class="why__card" data-reveal>
+          <div class="why__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H9C7.34 3 6 4.34 6 6v16l8-3 8 3V6c0-1.66-1.34-3-3-3zm1 17.07l-6-2.24-6 2.24V6c0-.55.45-1 1-1h10c.55 0 1 .45 1 1v14.07z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="why__card-title">Premium Products</h3>
+          <p class="why__card-body">We partner exclusively with world-renowned luxury skincare and beauty brands, ensuring every treatment delivers visible, lasting results.</p>
+        </article>
+
+        <article class="why__card" data-reveal>
+          <div class="why__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="why__card-title">Ladies Only Sanctuary</h3>
+          <p class="why__card-body">A private, exclusively female environment designed for total comfort, relaxation, and discretion — your personal luxury retreat in the heart of Dubai.</p>
+        </article>
+
+        <article class="why__card" data-reveal>
+          <div class="why__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="why__card-title">Hygienic &amp; Safe</h3>
+          <p class="why__card-body">Impeccable hygiene protocols and single-use tools for every client guarantee your safety. We meet and exceed Dubai health authority standards.</p>
+        </article>
+
+        <article class="why__card" data-reveal>
+          <div class="why__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="why__card-title">Easy Booking</h3>
+          <p class="why__card-body">Book your appointment instantly via WhatsApp or our online form — flexible scheduling that fits around your life, with no-stress rescheduling.</p>
+        </article>
+
+        <article class="why__card" data-reveal>
+          <div class="why__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="why__card-title">Personalised Experience</h3>
+          <p class="why__card-body">Each visit begins with a consultation. We tailor every service to your skin type, hair texture, and personal preferences for flawless, customised results.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FEATURED SERVICES
+  ═══════════════════════════════════════════ -->
+  <section class="services section section--tinted" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Our Expertise</p>
+        <h2 class="section-title" id="services-title">Premium Services</h2>
+        <p class="section-subtitle">From radiant skincare to transformative hair — every treatment is a ritual.</p>
+      </div>
+
+      <div class="services__grid">
+
+        <!-- Hair Styling -->
+        <article class="svc-card" data-reveal>
+          <div class="svc-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1559185590-765cdc663325?auto=format&fit=crop&w=800&q=80"
+              alt="Professional hair styling at Bella Vie"
+              class="svc-card__img"
+              loading="lazy"
+            />
+            <div class="svc-card__overlay"></div>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">Hair Styling</h3>
+            <p class="svc-card__desc">Precision cuts, blowouts, and glamorous styling for every occasion — from boardroom to bridal.</p>
+            <a href="services.html#hair-styling" class="svc-card__link" aria-label="View Hair Styling services">Explore <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- Facials -->
+        <article class="svc-card" data-reveal>
+          <div class="svc-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+              alt="Luxury facial treatment at Bella Vie"
+              class="svc-card__img"
+              loading="lazy"
+            />
+            <div class="svc-card__overlay"></div>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">Facials &amp; Skincare</h3>
+            <p class="svc-card__desc">Customised facial treatments using leading European skincare ranges — targeting hydration, anti-ageing, and radiance.</p>
+            <a href="services.html#facials" class="svc-card__link" aria-label="View Facials services">Explore <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- Massage -->
+        <article class="svc-card" data-reveal>
+          <div class="svc-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
+              alt="Relaxing massage therapy at Bella Vie"
+              class="svc-card__img"
+              loading="lazy"
+            />
+            <div class="svc-card__overlay"></div>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">Massage Therapy</h3>
+            <p class="svc-card__desc">Swedish, deep tissue, hot stone, and aromatherapy massages crafted to release tension and restore your body's balance.</p>
+            <a href="services.html#massage" class="svc-card__link" aria-label="View Massage services">Explore <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- Nail Care -->
+        <article class="svc-card" data-reveal>
+          <div class="svc-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80"
+              alt="Nail art and care at Bella Vie"
+              class="svc-card__img"
+              loading="lazy"
+            />
+            <div class="svc-card__overlay"></div>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">Nail Care</h3>
+            <p class="svc-card__desc">Manicures, pedicures, gel extensions, and bespoke nail art in a serene, hygienic setting using only premium products.</p>
+            <a href="services.html#nails" class="svc-card__link" aria-label="View Nail Care services">Explore <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- Makeup -->
+        <article class="svc-card" data-reveal>
+          <div class="svc-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=800&q=80"
+              alt="Professional makeup application at Bella Vie"
+              class="svc-card__img"
+              loading="lazy"
+            />
+            <div class="svc-card__overlay"></div>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">Makeup</h3>
+            <p class="svc-card__desc">Event makeup, bridal packages, and editorial looks by our certified makeup artists using luxury brands.</p>
+            <a href="services.html#makeup" class="svc-card__link" aria-label="View Makeup services">Explore <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <!-- Waxing & Threading -->
+        <article class="svc-card" data-reveal>
+          <div class="svc-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&w=800&q=80"
+              alt="Waxing and threading services at Bella Vie"
+              class="svc-card__img"
+              loading="lazy"
+            />
+            <div class="svc-card__overlay"></div>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">Waxing &amp; Threading</h3>
+            <p class="svc-card__desc">Precise, gentle hair removal using premium wax and expert threading technique for smooth, long-lasting results.</p>
+            <a href="services.html#waxing" class="svc-card__link" aria-label="View Waxing & Threading services">Explore <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-cta">
+        <a href="services.html" class="btn btn--outline">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       LUXURY SPA EXPERIENCE — Full-bleed immersive
+  ═══════════════════════════════════════════ -->
+  <section class="spa-feature section" id="spa" aria-labelledby="spa-title">
+    <div class="spa-feature__inner">
+      <!-- Left: image stack -->
+      <div class="spa-feature__images" aria-hidden="true">
+        <div class="spa-feature__img-main">
+          <img
+            src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80"
+            alt="Woman enjoying luxury spa massage at Bella Vie"
+            loading="lazy"
+          />
+        </div>
+        <div class="spa-feature__img-accent">
+          <img
+            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80"
+            alt="Luxury spa product arrangement"
+            loading="lazy"
+          />
+        </div>
+        <div class="spa-feature__award" aria-label="Award badge">
+          <span class="spa-feature__award-num">5★</span>
+          <span class="spa-feature__award-text">Rated Experience</span>
+        </div>
+      </div>
+
+      <!-- Right: copy -->
+      <div class="spa-feature__content">
+        <p class="section-eyebrow">The Ritual</p>
+        <h2 class="section-title" id="spa-title">A Sanctuary<br /><em>Unlike Any Other</em></h2>
+        <p class="spa-feature__body">
+          Step into a world where time slows and every sense is indulged. Our spa has been designed to mirror the finest five-star hotel retreats — from the warm amber lighting and cloud-soft treatment beds to the curated soundscape and bespoke aromatherapy blends.
+        </p>
+        <p class="spa-feature__body">
+          Whether you seek deep restoration, a bridal glow, or simply an afternoon of pure self-care, Bella Vie is your refuge in the city.
+        </p>
+
+        <ul class="spa-feature__list" role="list">
+          <li class="spa-feature__list-item">
+            <span class="spa-feature__list-dot" aria-hidden="true"></span>
+            Private treatment suites available
+          </li>
+          <li class="spa-feature__list-item">
+            <span class="spa-feature__list-dot" aria-hidden="true"></span>
+            Couple and group bookings welcome
+          </li>
+          <li class="spa-feature__list-item">
+            <span class="spa-feature__list-dot" aria-hidden="true"></span>
+            Complimentary herbal tea and consultation
+          </li>
+          <li class="spa-feature__list-item">
+            <span class="spa-feature__list-dot" aria-hidden="true"></span>
+            Premium European product ranges only
+          </li>
+        </ul>
+
+        <a href="packages.html" class="btn btn--primary">View Spa Packages</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       GALLERY PREVIEW
+  ═══════════════════════════════════════════ -->
+  <section class="gallery-preview section section--dark" id="gallery" aria-labelledby="gallery-title">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <p class="section-eyebrow section-eyebrow--gold">Beauty in Motion</p>
+        <h2 class="section-title section-title--light" id="gallery-title">Gallery</h2>
+        <p class="section-subtitle section-subtitle--light">A glimpse into the world of Bella Vie.</p>
+      </div>
+
+      <div class="gallery-preview__grid">
+        <div class="gallery-preview__item gallery-preview__item--tall" data-reveal>
+          <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=700&q=80" alt="Luxury facial treatment" loading="lazy" />
+          <div class="gallery-preview__caption">Skincare Ritual</div>
+        </div>
+        <div class="gallery-preview__item" data-reveal>
+          <img src="https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=600&q=80" alt="Relaxing spa treatment" loading="lazy" />
+          <div class="gallery-preview__caption">Spa Treatment</div>
+        </div>
+        <div class="gallery-preview__item" data-reveal>
+          <img src="https://images.unsplash.com/photo-1630843599725-32ead7671867?auto=format&fit=crop&w=600&q=80" alt="Nail art at Bella Vie" loading="lazy" />
+          <div class="gallery-preview__caption">Nail Art</div>
+        </div>
+        <div class="gallery-preview__item gallery-preview__item--wide" data-reveal>
+          <img src="https://images.unsplash.com/photo-1506003094589-53954a26283f?auto=format&fit=crop&w=1000&q=80" alt="Relaxing bath ritual" loading="lazy" />
+          <div class="gallery-preview__caption">Bathing Ritual</div>
+        </div>
+        <div class="gallery-preview__item" data-reveal>
+          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=600&q=80" alt="Skincare products" loading="lazy" />
+          <div class="gallery-preview__caption">Luxury Products</div>
+        </div>
+      </div>
+
+      <div class="section-cta">
+        <a href="gallery.html" class="btn btn--outline btn--outline-light">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════════ -->
+  <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Client Stories</p>
+        <h2 class="section-title" id="testimonials-title">What Our Guests Say</h2>
+      </div>
+
+      <div class="testimonials__track" id="testimonialsTrack" role="list" aria-live="polite">
+
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "The facial I had at Bella Vie was genuinely transformative. My skin looked like it had been retouched — friends thought I had a filter on. The therapist was incredibly knowledgeable and the entire experience felt deeply luxurious."
+          </blockquote>
+          <footer class="testimonial-card__footer">
+            <div class="testimonial-card__avatar" aria-hidden="true">S</div>
+            <div>
+              <cite class="testimonial-card__name">Sara Al Mansouri</cite>
+              <p class="testimonial-card__role">Regular Client · Dubai Marina</p>
+            </div>
+          </footer>
+        </article>
+
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "I came for my bridal package and they absolutely exceeded every expectation. The team felt like family by the end. My hair, makeup, and nails were perfection — I felt like a queen on my wedding day."
+          </blockquote>
+          <footer class="testimonial-card__footer">
+            <div class="testimonial-card__avatar" aria-hidden="true">N</div>
+            <div>
+              <cite class="testimonial-card__name">Noura Khalid</cite>
+              <p class="testimonial-card__role">Bridal Client · Jumeirah</p>
+            </div>
+          </footer>
+        </article>
+
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "I've been to salons across London, Paris and Dubai — Bella Vie is in a different league. The ambience, the staff, the products — everything is elite. This is my home salon now, permanently."
+          </blockquote>
+          <footer class="testimonial-card__footer">
+            <div class="testimonial-card__avatar" aria-hidden="true">L</div>
+            <div>
+              <cite class="testimonial-card__name">Layla Abubakar</cite>
+              <p class="testimonial-card__role">Loyal Client · Downtown Dubai</p>
+            </div>
+          </footer>
+        </article>
+
+        <article class="testimonial-card" role="listitem">
+          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "The hot stone massage was the best I have ever experienced anywhere in the world. The therapist intuitively knew exactly where to focus. I walked out feeling like a new person. Already booked my next visit."
+          </blockquote>
+          <footer class="testimonial-card__footer">
+            <div class="testimonial-card__avatar" aria-hidden="true">A</div>
+            <div>
+              <cite class="testimonial-card__name">Aisha Rahman</cite>
+              <p class="testimonial-card__role">Spa Client · Business Bay</p>
+            </div>
+          </footer>
+        </article>
+
+      </div>
+
+      <!-- Dots -->
+      <div class="testimonials__dots" id="testimonialsDots" role="tablist" aria-label="Testimonial navigation"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       PACKAGES PREVIEW
+  ═══════════════════════════════════════════ -->
+  <section class="packages section section--tinted" id="packages" aria-labelledby="packages-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Curated Rituals</p>
+        <h2 class="section-title" id="packages-title">Beauty Packages</h2>
+        <p class="section-subtitle">Expertly bundled treatments at exceptional value — designed around you.</p>
+      </div>
+
+      <div class="packages__grid">
+
+        <article class="pkg-card" data-reveal>
+          <div class="pkg-card__header">
+            <p class="pkg-card__tag">Popular</p>
+            <h3 class="pkg-card__name">The Radiance</h3>
+            <p class="pkg-card__duration">3 hours · For Her</p>
+          </div>
+          <ul class="pkg-card__list" role="list">
+            <li>Signature Hydrafacial</li>
+            <li>Express Manicure</li>
+            <li>Brow Design &amp; Threading</li>
+            <li>Complimentary Head Massage</li>
+          </ul>
+          <div class="pkg-card__footer">
+            <span class="pkg-card__price">From AED 490</span>
+            <a href="contact.html" class="btn btn--primary btn--sm">Book Now</a>
+          </div>
+        </article>
+
+        <article class="pkg-card pkg-card--featured" data-reveal>
+          <div class="pkg-card__header">
+            <p class="pkg-card__tag pkg-card__tag--gold">Bestseller</p>
+            <h3 class="pkg-card__name">The Bella Vie Ritual</h3>
+            <p class="pkg-card__duration">5 hours · Full Day</p>
+          </div>
+          <ul class="pkg-card__list" role="list">
+            <li>Deep Tissue Massage (60 min)</li>
+            <li>Premium European Facial</li>
+            <li>Gel Manicure &amp; Pedicure</li>
+            <li>Blow Dry &amp; Style</li>
+            <li>Champagne Welcome</li>
+          </ul>
+          <div class="pkg-card__footer">
+            <span class="pkg-card__price">From AED 890</span>
+            <a href="contact.html" class="btn btn--primary btn--sm">Book Now</a>
+          </div>
+        </article>
+
+        <article class="pkg-card" data-reveal>
+          <div class="pkg-card__header">
+            <p class="pkg-card__tag">Bridal</p>
+            <h3 class="pkg-card__name">The Bride</h3>
+            <p class="pkg-card__duration">Full day + Trial</p>
+          </div>
+          <ul class="pkg-card__list" role="list">
+            <li>Bridal Makeup (Trial + Day)</li>
+            <li>Bridal Hair Styling</li>
+            <li>Luxury Mani &amp; Pedi</li>
+            <li>Full Body Wax</li>
+            <li>Bridal Facial</li>
+          </ul>
+          <div class="pkg-card__footer">
+            <span class="pkg-card__price">From AED 1,490</span>
+            <a href="contact.html" class="btn btn--primary btn--sm">Book Now</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-cta">
+        <a href="packages.html" class="btn btn--outline">View All Packages</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CTA BANNER
+  ═══════════════════════════════════════════ -->
+  <section class="cta-banner" id="cta" aria-labelledby="cta-title">
+    <div class="cta-banner__bg">
+      <img
+        src="https://images.unsplash.com/photo-1514163061636-02db31852e84?auto=format&fit=crop&w=1600&q=80"
+        alt="Luxury spa floral arrangement"
+        class="cta-banner__img"
+        loading="lazy"
+      />
+      <div class="cta-banner__overlay"></div>
+    </div>
+    <div class="cta-banner__content">
+      <p class="section-eyebrow section-eyebrow--gold">Your First Visit Awaits</p>
+      <h2 class="cta-banner__title" id="cta-title">Ready to Feel<br /><em>Beautiful?</em></h2>
+      <p class="cta-banner__sub">Book your appointment today and experience the Bella Vie difference — where luxury meets artistry.</p>
+      <div class="cta-banner__actions">
+        <a href="contact.html" class="btn btn--primary btn--lg">Book Appointment</a>
+        <a href="https://wa.me/971500000000" class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer" aria-label="Book via WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT / FIND US
+  ═══════════════════════════════════════════ -->
+  <section class="contact-strip section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Visit Us</p>
+        <h2 class="section-title" id="contact-title">Find Bella Vie</h2>
+      </div>
+
+      <div class="contact-strip__grid">
+        <div class="contact-strip__info">
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5z"/></svg>
+            </div>
+            <div>
+              <p class="contact-info-item__label">Address</p>
+              <p class="contact-info-item__value">Dubai, United Arab Emirates<br /><span class="contact-info-item__note">(Exact address shared on booking)</span></p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div>
+              <p class="contact-info-item__label">Phone &amp; WhatsApp</p>
+              <a href="tel:+971500000000" class="contact-info-item__value contact-info-item__link">+971 50 000 0000</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            </div>
+            <div>
+              <p class="contact-info-item__label">Hours</p>
+              <p class="contact-info-item__value">Saturday – Thursday: 10am – 9pm<br />Friday: 2pm – 9pm</p>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn--primary">Get In Touch</a>
+        </div>
+
+        <!-- Map placeholder — replace with Google Maps embed -->
+        <div class="contact-strip__map" aria-label="Map location — replace src with Google Maps embed">
+          <div class="map-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>Google Maps embed goes here</p>
+            <p class="map-placeholder__note">Replace this div with your &lt;iframe&gt; from Google Maps</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__top">
+
+        <!-- Brand column -->
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Ccircle cx='80' cy='80' r='78' fill='%231A1218' stroke='%23C9956A' stroke-width='1.5'/%3E%3Ctext x='80' y='72' text-anchor='middle' font-family='Georgia,serif' font-size='42' font-weight='700' letter-spacing='4' fill='white'%3EBELLA%3C/text%3E%3Ctext x='80' y='110' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='300' letter-spacing='3' fill='%23C9956A'%3EVIE%3C/text%3E%3C/svg%3E"
+              alt="Bella Vie Salon & Spa"
+              class="footer__logo-img"
+            />
+          </div>
+          <p class="footer__tagline">Where luxury meets artistry.<br />Dubai's premier ladies beauty sanctuary.</p>
+          <!-- Social -->
+          <div class="footer__social" aria-label="Social media links">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/971500000000" class="footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Nav columns -->
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-col">
+            <h3 class="footer__nav-title">Services</h3>
+            <ul role="list">
+              <li><a href="services.html#hair-styling">Hair Styling</a></li>
+              <li><a href="services.html#hair-treatments">Hair Treatments</a></li>
+              <li><a href="services.html#facials">Facials</a></li>
+              <li><a href="services.html#skincare">Skincare</a></li>
+              <li><a href="services.html#makeup">Makeup</a></li>
+              <li><a href="services.html#nails">Nail Care</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h3 class="footer__nav-title">Quick Links</h3>
+            <ul role="list">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h3 class="footer__nav-title">Opening Hours</h3>
+            <ul role="list" class="footer__hours">
+              <li><span>Sat – Thu</span><span>10am – 9pm</span></li>
+              <li><span>Friday</span><span>2pm – 9pm</span></li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary btn--sm footer__book-btn">Book Appointment</a>
+          </div>
+        </nav>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© <span id="year"></span> Bella Vie Salon &amp; Spa. All rights reserved. Dubai, UAE.</p>
+        <p class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <span aria-hidden="true">·</span>
+          <a href="#">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
